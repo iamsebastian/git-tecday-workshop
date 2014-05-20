@@ -1,0 +1,32 @@
+doctype html
+html(lang+"de")
+
+head
+  title= 'git.sockets'
+  link(rel='stylesheet', href='/css.css')
+  style.
+    .switch {
+      opacity: 0;
+    }
+
+body
+  h1 GIT workshop.
+  block content
+    p Erstellen Sie ein neues GIT Repository, lokal, auf Ihrem Computer!
+    input#textbox(oninput='changedTextbox()',placeholder='git _____')
+
+  .switch#switch1
+    p Prima.
+    p Sie haben nun ein lokales Repository erstellt.
+    p Im folgenden wird eine lokale Datei angelegt: 
+
+    pre
+      code
+        $ touch readme.md
+    p Diese Datei wird jedoch nicht in Ihre Änderungen aufgenommen, so lange sie diese Datei nicht zu Ihrem Repository hinzugefügt haben. Bitte fügen Sie die Datei nun zu diesem hinzu.
+
+    input(placeholder='git ...')
+
+//- scripts
+script(type='text/javascript', src='/socket.io/socket.io.js')
+script(type='text/javascript', src='/script.js')
