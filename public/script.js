@@ -6,7 +6,9 @@ var switches = document.querySelectorAll('.switch')
   , boxes = document.querySelectorAll('.textbox')
   , dict = [
       'git init',
-      'git add readme.md'
+      'git add readme.md',
+      'git commit',
+      'git push'
       ]
   , emitter = []
 ;
