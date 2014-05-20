@@ -1,15 +1,3 @@
-
 # GIT Workshop
 
-### Spiegeln eines Remote-Repositories 
-`git _____`
-
-- [ ] this is a test
-- [ ] test b
-- [ ] text c
-  - [ ] test dd
-  - [ ] 
-
-Hi there.
-
-<link href="css.css" rel="stylesheet"></link>
+An interactive workshop for the tecDay of may 2014 at plazz.
