@@ -30,16 +30,13 @@ server.listen(port);
 io.sockets.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
 
-  socket.on('schalte1frei', function () {
-    viewData.freigeschalten = true;
-  });
-
-  socket.on('textboxChanged', function (data) {
-    console.log('Console: Textbox changed it\'s value: ' + data.data);
-    socket.broadcast.emit('emitTest', data.data);
+  socket.on('boxesChanged', function (boxes) {
+    console.log('Console: Boxes changed their value: ' + boxes);
+    socket.broadcast.emit('emitTest', boxes);
   });
 
   socket.on('switch1', function() {
+    viewData.switch1 = true;
     io.sockets.emit('switch1');
   });
 });

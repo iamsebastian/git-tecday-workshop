@@ -305,6 +305,12 @@ pre {
 .switch {
   opacity: 0;
   transition: 1.2s;
+  padding: 0 0 2rem;
+}
+
+.green {
+  color: green;
+  background-color: hsla(83,73%, 41%, .71);
 }
 
 input {
