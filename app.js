@@ -30,9 +30,9 @@ server.listen(port);
 io.sockets.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
 
-  socket.on('boxesChanged', function (boxes) {
-    console.log('Console: Boxes changed their value: ' + boxes);
-    socket.broadcast.emit('emitTest', boxes);
+  socket.on('boxesChanged', function (_values) {
+    console.log('Console: Boxes changed their value: ' + _values);
+    socket.broadcast.emit('emitTest', _values);
   });
 
   socket.on('switch1', function() {
