@@ -13,7 +13,9 @@ var switches = document.querySelectorAll('.switch')
       ,'git checkout hotfix'
       ,'git status'
       ,'git log'
-      ,'git commit -m \'message\''
+      ,'git checkout master'
+      ,'git merge hotfix'
+      ,'git branch -d hotfix'
       ]
   , emitter = []
 ;
