@@ -16,8 +16,12 @@ var switches = document.querySelectorAll('.switch')
       ,'git checkout master'
       ,'git merge hotfix'
       ,'git branch -d hotfix'
+      ,'git reset'
+      ,'git revert'
+      ,'git reset icon.psd'
       ]
   , emitter = []
+  , box = document.querySelector('#textbox')
 ;
 
 /**
@@ -64,11 +68,12 @@ var changedTextbox = function() {
   }
 }
 
+/**
+ * attach handler to every input
+ */
 for(i = 0; i < boxes.length; i++) {
   boxes[i].oninput = changedTextbox;
 }
-
-var box = document.querySelector('#textbox');
 
 socket.on('emitTest', function(_values) {
   console.log('emitTest received: ' + _values);

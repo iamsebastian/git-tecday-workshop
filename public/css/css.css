@@ -1,21 +1,48 @@
 html {
   position: relative;
-  margin: 1rem; 
+  margin: .7rem 1rem; 
   padding: 0 0 2rem;
+  background-color: #F8F4E2;
 }
 
+
 body {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.9rem;
-  background-color: white;
-  width: calc(100% - 1rem);
-  max-width: 640px;
+  font-family: oswald, Helvetica, arial, sans-serif;
+  font-size: 24px;
+  line-height: 39px;
+  color: #001325;
+  width: calc(100% - 0.5rem);
   position: absolute;
   margin: auto;
   border-bottom: 2rem solid transparent;
   left: 0;top: 0;right: 0;bottom: 0;
   }
+
+@media only screen and (min-width: 721px){
+  body {
+    width: 640px;
+  }
+}
+
+input {
+  width: calc(100% - 2rem);
+  min-height: 51px;
+  font-size: 24px;
+  border: 3px solid #90BD90;
+  font-family: monospace;
+  padding: 0 .3rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  background: hsla(0,0%,100%,.71);
+  color: #001325;
+}
+
+input:focus {
+  /*color: #C8385A;*/
+  border-color: #187072;
+}
 
 body > *:first-child {
   margin-top: 0 !important; }
@@ -68,28 +95,44 @@ h6 tt, h6 code {
 
 h1 {
   font-size: 32px;
+  line-height: 48px;
+  font-weight: 500;
   color: hsla(0,0%,0%,.86); }
 
 h2 {
   font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
   border-bottom: 1px solid #cccccc;
   color: black; }
 
 h3 {
-  font-size: 18px; }
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px; }
 
 h4 {
-  font-size: 16px; }
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px; }
 
 h5 {
-  font-size: 14px; }
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px; }
 
 h6 {
+  font-weight: 500;
   color: #777777;
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 21px; }
 
 p, blockquote, ul, ol, dl, li, table, pre {
   margin: 15px 0; }
+
+b {
+  font-weight: 500;
+}
 
 hr {
   border: 1px solid rgba(0,0%,0%,.5);
@@ -313,11 +356,3 @@ pre {
   background-color: hsla(83,73%, 41%, .71);
 }
 
-input {
-  width: calc(100% - 1rem);
-  min-height: 2rem;
-  font-size: 1.4rem;
-  border: 3px solid hsla(0,0%,0%,.14);
-  font-family: monospace;
-  padding: 0 .3rem;
-}
