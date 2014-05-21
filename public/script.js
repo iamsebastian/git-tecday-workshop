@@ -5,10 +5,12 @@ var socket = io.connect(document.URL);
 var switches = document.querySelectorAll('.switch')
   , boxes = document.querySelectorAll('.textbox')
   , dict = [
-      'git init',
-      'git add readme.md',
-      'git commit',
-      'git push'
+      'git init'
+      ,'git add readme.md'
+      ,'git commit'
+      ,'git push'
+      ,'git branch hotfix'
+      ,'git checkout hotfix'
       ]
   , emitter = []
 ;
