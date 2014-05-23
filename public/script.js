@@ -5,20 +5,20 @@ var socket = io.connect(document.URL);
 var switches = document.querySelectorAll('.switch')
   , boxes = document.querySelectorAll('.textbox')
   , dict = [
-      'git init'
-      ,'git add readme.md'
-      ,'git commit'
-      ,'git push'
-      ,'git branch hotfix'
-      ,'git checkout hotfix'
-      ,'git status'
-      ,'git log'
-      ,'git checkout master'
-      ,'git merge hotfix'
-      ,'git branch -d hotfix'
-      ,'git reset'
-      ,'git revert'
-      ,'git reset icon.psd'
+      /git init/
+      ,/git add readme.md/
+      ,/git commit/
+      ,/git push/
+      ,/git branch hotfix/
+      ,/git checkout hotfix/
+      ,/git status/
+      ,/git log/
+      ,/git checkout master/
+      ,/git merge hotfix/
+      ,/git branch -d hotfix/
+      ,/git reset/
+      ,/git revert/
+      ,/git reset icon.psd/
       ]
   , emitter = []
   , box = document.querySelector('#textbox')
@@ -62,7 +62,8 @@ var changedTextbox = function() {
   console.log('changedTextbox call, with valuesFromBoxes: ' + valuesFromBoxes());
 
   for(j = 0; j < dict.length; j++) {
-    if(dict[j] === boxes[j].value) {
+    // test for regex
+    if(dict[j].test(boxes[j].value)) {
       socket.emit(emitter[j]);
     }
   }
