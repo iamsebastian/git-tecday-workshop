@@ -1,0 +1,6 @@
+p Nun ist aber der Fall, dass Ihr Arbeitsstand durch den Pull Änderungen enthält und Sie einen erneuten Commit machen müssen.
+p Eine Möglichkeit, solche <i>merge-commits</i> zu umgehen, ist, dass Sie <i>pull</i> mit der Option <b>--rebase</b> verwenden. Rebase funktioniert so: Es nimmt die vorhandenen Änderungen aus der Vergangenheit des Git Repository und fügt sie als aktuellste Änderungen wieder vorn an.
+p Vorteil: Es gibt keinen merge-commit und somit keine - vllt. unnötige - Nachricht.
+p Nachteil: Die History des Repository wird neu geschrieben, was es unmöglich macht, Details der Quelle der <i>gemergten</i> Änderungen, in Erfahrung zu bringen - wie z.B. Zeitpunkt der Erstellung.
+
++textbox('git pull --rebase')

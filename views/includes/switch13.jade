@@ -1,21 +1,3 @@
 p Sie erstellen im Arbeitsverzeichnis drei Grafik-Dateien: <pre>icon.png</pre> <pre>icon.jpg</pre> &amp; <pre>icon.psd</pre> und fügen diese mit <b>git add .</b> (tbd) zu Ihrem Repository hinzu. Nun merken Sie, dass die PSD-Datei für Ihre Kollegen unbrauchbar ist und sie wollen diese wieder aus dem Repository heraus nehmen, ohne sie zu löschen. Ein sogenannter <b>unstage</b>, durchgeführt mit <b>reset</b>.
 
 +textbox('git reset <file>')
-
-p Sie klonen ein Repo auf Ihre lokale Festplatte. <b>git clone</b>
-
-+textbox('git clone <URL>')
-
-p Und erstellen einen Branch für die Erweiterung <i>addon</i> - mit Hilfe von <b>git checkout -b [branchname]</b>.
-
-+textbox('git checkout -b ...')
-
-h1 cherry-pick
-
-p Nun möchten Sie für das Addon eine Bibliothek nutzen, installieren dafür die library.rb, und fügen diese dem Repo hinzu. Anschließend kommt ein Kollege, der ebenfalls ein neues Feature erstellen will und dafür die von Ihnen installierte Bibliothek nutzen möchte. Mit cherry-pick ist es möglich, einzelne Dateien <i>heraus zu ziehen</i>.
-
-pre
-  code
-    git cherry-pick 
-
-+textbox('git cherry-pick <file>')

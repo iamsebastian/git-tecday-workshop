@@ -7,7 +7,7 @@ var express = require('express')
 app.set('view engine', 'jade');
 
 var viewData = {}
-  , switches = 13;
+  , switches = 18;
 
 app.get('/', function(req, res) {
   res.render('index.jade', {

@@ -5,7 +5,7 @@ var socket = io.connect(document.URL);
 var switches = document.querySelectorAll('.switch')
   , boxes = document.querySelectorAll('.textbox')
   , dict = [
-      /git init/
+      /git initXXX/
       ,/git add readme.md/
       ,/git commit/
       ,/git push/
@@ -19,6 +19,11 @@ var switches = document.querySelectorAll('.switch')
       ,/git reset/
       ,/git revert/
       ,/git reset icon.psd/
+      ,/git clone/
+      ,/git checkout -b addon/
+      ,/git cherry-pick dbf8e77/
+      ,/git pull/
+      ,/git pull --rebase/
       ]
   , emitter = []
   , box = document.querySelector('#textbox')
